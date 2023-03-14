@@ -13,3 +13,7 @@ How to Use: This is the link to my streamlit app: https://sdorny-amsterdam-airbn
 
 
 Credits: A huge thank you to CoRise! They are an incredible company who put on a 2.5 week bootcamp to introduce individuals to NumPy and Pandas. This course was taught by Luca Belli, managed by Shreya Vora, and assisted by 5 wonderful TA's.
+
+
+Helpful Resourses: 
+A Visual Guide to NumPy: https://jalammar.github.io/visual-numpy/
