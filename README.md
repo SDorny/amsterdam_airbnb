@@ -1,6 +1,5 @@
 # Amsterdam - Airbnb vs Destination
 
-Project Description: 
 
 This application shows me the Airbnb locations in Amsterdam compared to the place I want to visit. This helps me to decide where the best place is to stay based on the distance from my location and price.
 I used NumPy to make modifications to the data in a CSV file. This helped me to learn NumPy and understand its computing capabilites. I also used Google Colab in order to run the lines of code and share with others in the CoRise bootcamp.
