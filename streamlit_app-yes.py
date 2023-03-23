@@ -3,13 +3,11 @@ import plotly.express as px
 import streamlit as st
 
 # Display title and text
-st.title("Week 1 - Data and visualization")
-st.markdown("Here we can see the dataframe created during this weeks project. Here are some of the steps we took to prep the data.")
-st.markdown("**Preprocessed the Dataset** - transposed, removed string characters, converted to a float to manipulate")
-st.markdown("**Converted from USD to Aregentine Pesos** - added 2022 inflation, corrected decimals")
-st.markdown("**Researched a desired location to visit** - added coordinates, calculate location from Airbnb")
-st.markdown("**Prepped the Dataset for Download** - added new column for location from Airbnb, color, and place to visit")
-st.markdown("**Created a Streamlit app** - used Pandas to format our dataframe, plotly for visuals and slider")
+st.title("Amsterdam Airbnb")
+st.subheading("Week 1- Data and Visualization")
+st.markdown("The goal of this project was to become familiar with NumPy. More specifically, file input/output, computation on arrays, aggregation, and modifying arrays.")
+st.subheading("Description")
+st.markdown("The dataset includes Airbnb data from Amsterdam, the capital of the Netherlands. The data provided were the Airbnb Listing ID, Price, Latitude, and Longitude columns. Modifications were made to those columns in addition to creating two new columns for further analysis. These are Meters from chosen location and Location.")
 
 # Read dataframe
 dataframe = pd.read_csv(
@@ -25,7 +23,7 @@ dataframe = pd.read_csv(
 )
 
 # Sidebar - title & filters
-price_range = st.sidebar.slider('Max Price:', min_value=3000, max_value=18588, step=2000, value=18588)
+price_range = st.sidebar.slider('Max Price:', min_value=3000.00, max_value=18588.00, step=2000, value=18588)
 price_range = int(price_range)
 dataframe = dataframe[(dataframe['Price'] < price_range)]
 
@@ -44,7 +42,7 @@ dataframe["Location"] = dataframe["Location"].replace(
 
 # Display dataframe and text
 st.dataframe(dataframe)
-st.markdown("Below is a map showing all the Airbnb listings with a blue dot and the location we've chosen with a red dot. Use the slider to adjust the price range.")
+st.markdown("Below is a map showing all the Airbnb listings with a blue dot and the location I've chosen with a red dot. Use the slider to adjust the price range.")
 
 # Create the plotly express figure
 fig = px.scatter_mapbox(
