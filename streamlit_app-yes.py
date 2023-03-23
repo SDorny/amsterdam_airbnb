@@ -4,7 +4,7 @@ import streamlit as st
 
 # Display title and text
 st.title("Week 1 - Data and visualization")
-st.markdown("Here we can see the dataframe created during this weeks project.")
+st.markdown("Here we can see the dataframe created during this weeks project. In the project, we converted the price from USD to a different currency of our choice. I chose to do Argentine Pesos.")
 
 # Read dataframe
 dataframe = pd.read_csv(
@@ -39,7 +39,7 @@ dataframe["Location"] = dataframe["Location"].replace(
 
 # Display dataframe and text
 st.dataframe(dataframe)
-st.markdown("Below is a map showing all the Airbnb listings with a blue dot and the location we've chosen with a red dot.")
+st.markdown("Below is a map showing all the Airbnb listings with a blue dot and the location we've chosen with a red dot. Use the slider to adjust the price range.")
 
 # Create the plotly express figure
 fig = px.scatter_mapbox(
