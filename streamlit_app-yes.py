@@ -19,6 +19,11 @@ dataframe = pd.read_csv(
     ],
 )
 
+# Sidebar - title & filters
+price_range = st.sidebar.slider('Max Price:', min_value=10000, max_value=18588, step=2000, value=18588)
+price_range = int(price_range)
+dataframe = dataframe[(dataframe['Price'] < price_range)]
+
 # We have a limited budget, therefore we would like to exclude
 # listings with a price above 100 pounds per night
 dataframe = dataframe[dataframe["Price"] <= 18588.74]
@@ -31,12 +36,6 @@ dataframe["Price"] = "$ " + dataframe["Price"].round(2).astype(str) # <--- CHANG
 dataframe["Location"] = dataframe["Location"].replace(
     {1.0: "To visit", 0.0: "Airbnb listing"}
 )
-
-# Sidebar - title & filters
-price_range = st.sidebar.slider('Max Price:', min_value=10000, max_value=18588, step=2000, value=18588)
-price_range = int(price_range)
-
-dataframe = dataframe[(dataframe['Price'] < price_range)]
 
 # Display dataframe and text
 st.dataframe(dataframe)
