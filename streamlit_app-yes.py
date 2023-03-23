@@ -7,7 +7,9 @@ st.title("Amsterdam Airbnb")
 st.subheader("Week 1 - Data and Visualization")
 st.markdown("The goal of this project was to become familiar with NumPy. More specifically, file input/output, computation on arrays, aggregation, and modifying arrays.")
 st.subheader("Description")
-st.markdown("The dataset includes Airbnb data from Amsterdam, the capital of the Netherlands. The data provided were the Airbnb Listing ID, Price, Latitude, and Longitude columns. Modifications were made to those columns in addition to creating two new columns for further analysis. These are Meters from chosen location and Location.")
+st.markdown("The dataset includes Airbnb data from Amsterdam, the capital of the Netherlands. The data provided consisted of the Airbnb Listing ID, Price, Latitude, and Longitude columns. Modifications were made to those columns in addition to creating two new columns for further analysis. These are Meters from chosen location and Location.")
+st.markdown("For my project, I made a few personal modifications. I converted the price from USD to Argentine Pesos, researched a location I wanted to visit (Van Gogh Museum), and added a slider for price in order to eliminate listings that were not within a certain price range.")
+st.markdown("Huge shoutout to CoRise's free two week course on NumPy and Pandas! They made all of this possible!")
 
 # Read dataframe
 dataframe = pd.read_csv(
@@ -23,7 +25,7 @@ dataframe = pd.read_csv(
 )
 
 # Sidebar - title & filters
-price_range = st.sidebar.slider('Max Price:', min_value=3000.00, max_value=18588.00, step=2000, value=18588)
+price_range = st.sidebar.slider('Max Price:', min_value=3000, max_value=18588, step=2000, value=18588)
 price_range = int(price_range)
 dataframe = dataframe[(dataframe['Price'] < price_range)]
 
