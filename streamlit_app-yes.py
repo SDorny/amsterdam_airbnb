@@ -5,15 +5,15 @@ import streamlit as st
 # Display title and text
 st.title("Week 1 - Data and visualization")
 st.markdown("Here we can see the dataframe created during this weeks project. Here are some of the steps we took to prep the data.")
-st.header("Preprocessed the Dataset")
+st.subheader("Preprocessed the Dataset")
 st.markdown("transposed, removed string characters, converted to a float to manipulate")
-st.header("Converted from USD to Aregentine Pesos")
+st.subheader("Converted from USD to Aregentine Pesos")
 st.markdown("added 2022 inflation, corrected decimals")
-st.header("Researched a desired location to visit")
+st.subheader("Researched a desired location to visit")
 st.markdown("added coordinates, calculate location from Airbnb")
-st.header("Prepped the Dataset for Download")
+st.subheader("Prepped the Dataset for Download")
 st.markdown("added new column for location from Airbnb, color, and place to visit")
-st.header("Created a Streamlit app")
+st.subheader("Created a Streamlit app")
 st.markdown("used Pandas to format our dataframe, plotly for visuals and slider")
 
 # Read dataframe
