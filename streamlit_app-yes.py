@@ -32,6 +32,11 @@ dataframe["Location"] = dataframe["Location"].replace(
     {1.0: "To visit", 0.0: "Airbnb listing"}
 )
 
+# Sidebar - title & filters
+price_range = st.sidebar.slider('Max Price:', min_value=10000, max_value=18588, step=2000, value=18588)
+
+dataframe = dataframe[dataframe['Price'] < price_choice]
+
 # Display dataframe and text
 st.dataframe(dataframe)
 st.markdown("Below is a map showing all the Airbnb listings with a blue dot and the location we've chosen with a red dot.")
