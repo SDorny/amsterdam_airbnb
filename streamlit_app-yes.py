@@ -35,7 +35,7 @@ dataframe["Location"] = dataframe["Location"].replace(
 # Sidebar - title & filters
 price_range = st.sidebar.slider('Max Price:', min_value=10000, max_value=18588, step=2000, value=18588)
 
-dataframe = dataframe[dataframe['Price'] < price_range]
+dataframe = dataframe[dataframe['Price'] <= price_range]
 
 # Display dataframe and text
 st.dataframe(dataframe)
