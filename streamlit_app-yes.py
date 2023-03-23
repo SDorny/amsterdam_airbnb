@@ -4,9 +4,9 @@ import streamlit as st
 
 # Display title and text
 st.title("Amsterdam Airbnb")
-st.subheading("Week 1- Data and Visualization")
+st.subheader("Week 1 - Data and Visualization")
 st.markdown("The goal of this project was to become familiar with NumPy. More specifically, file input/output, computation on arrays, aggregation, and modifying arrays.")
-st.subheading("Description")
+st.subheader("Description")
 st.markdown("The dataset includes Airbnb data from Amsterdam, the capital of the Netherlands. The data provided were the Airbnb Listing ID, Price, Latitude, and Longitude columns. Modifications were made to those columns in addition to creating two new columns for further analysis. These are Meters from chosen location and Location.")
 
 # Read dataframe
