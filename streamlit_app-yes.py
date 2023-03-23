@@ -11,6 +11,7 @@ st.markdown("The dataset includes Airbnb data from Amsterdam, the capital of the
 st.markdown("For my project, I made a few personal modifications. I converted the price from USD to Argentine Pesos, researched a location I wanted to visit (Van Gogh Museum), and added a slider for price in order to eliminate listings that were not within a certain price range.")
 st.markdown("Huge shoutout to CoRise's free two week course on NumPy and Pandas! They made all of this possible!")
 
+st.subheader("Dataframe")
 # Read dataframe
 dataframe = pd.read_csv(
     "WK1_Airbnb_Amsterdam_listings_proj_solution.csv",
@@ -44,6 +45,7 @@ dataframe["Location"] = dataframe["Location"].replace(
 
 # Display dataframe and text
 st.dataframe(dataframe)
+st.subheader("Map")
 st.markdown("Below is a map showing all the Airbnb listings with a blue dot and the location I've chosen with a red dot. Use the slider to adjust the price range.")
 
 # Create the plotly express figure
