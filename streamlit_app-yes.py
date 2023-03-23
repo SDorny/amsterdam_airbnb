@@ -30,7 +30,7 @@ price_range = st.sidebar.slider('Max Price:', min_value=3000, max_value=18588, s
 price_range = int(price_range)
 dataframe = dataframe[(dataframe['Price'] < price_range)]
 
-meters_from = st.sidebar.slider('Max Price:', min_value=0), max_value=16000, step=2000, value=16000)
+meters_from = st.sidebar.slider('Meters from Location', min_value=0), max_value=16000, step=2000, value=16000)
 dataframe = dataframe[(dataframe["Meters from chosen location"] < meters_from)]
 
 # We have a limited budget, therefore we would like to exclude
