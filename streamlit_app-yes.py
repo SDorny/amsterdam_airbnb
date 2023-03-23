@@ -5,8 +5,8 @@ import streamlit as st
 # Display title and text
 st.title("Week 1 - Data and visualization")
 st.markdown("Here we can see the dataframe created during this weeks project. Here are some of the steps we took to prep the data.")
-st.subheader("Preprocessed the Dataset")
-st.markdown("transposed, removed string characters, converted to a float to manipulate")
+st.subheader("")
+st.markdown("**Preprocessed the Dataset**U+003A transposed, removed string characters, converted to a float to manipulate")
 st.subheader("Converted from USD to Aregentine Pesos")
 st.markdown("added 2022 inflation, corrected decimals")
 st.subheader("Researched a desired location to visit")
